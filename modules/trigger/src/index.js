@@ -32,7 +32,9 @@ const launchTask = async (name, args, env) => {
                         }
                     })
                 }
-            ]
+            ],
+
+            taskRoleArn: process.env.TASK_ROLE_ARN
         }
     }).promise()
 }

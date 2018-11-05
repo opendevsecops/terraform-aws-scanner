@@ -12,7 +12,30 @@ module "lambda" {
   log_retention_in_days = 90
 
   environment {
-    CLUSTER = "${var.cluster_arn}"
-    SUBNET  = "${var.subnet_id}"
+    CLUSTER       = "${var.cluster_arn}"
+    SUBNET        = "${var.subnet_id}"
+    TASK_ROLE_ARN = "${var.task_role_arn}"
   }
+}
+
+resource "aws_iam_role_policy" "policy" {
+  role = "${var.role_name}"
+
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "ecs:RunTask",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "${var.task_role_arn}"
+    }
+  ]
+}
+EOF
 }

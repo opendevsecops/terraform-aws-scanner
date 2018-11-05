@@ -15,3 +15,7 @@ variable "cluster_arn" {
 variable "subnet_id" {
   description = "The subnet id dedicated for task execution"
 }
+
+variable "task_role_arn" {
+  type = "string"
+}

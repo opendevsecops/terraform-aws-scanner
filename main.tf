@@ -11,6 +11,8 @@ module "trigger" {
 
   cluster_arn = "${module.cluster.arn}"
   subnet_id   = "${module.cluster.subnet_id}"
+
+  task_role_arn = "${module.cluster.task_role_arn}"
 }
 
 # ---
