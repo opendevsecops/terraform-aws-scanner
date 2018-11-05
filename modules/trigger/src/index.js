@@ -38,7 +38,7 @@ const launchTask = async (name, args, env) => {
 }
 
 exports.handler = async (event) => {
-    const { task_name, task_args, _task_env } = event || {}
+    const { task_name, task_args, task_env } = event || {}
 
-    await launchTask(task_name, task_args, task_env)
+    await launchTask(task_name, task_args || [], task_env || {})
 }
