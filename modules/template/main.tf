@@ -8,7 +8,7 @@ resource "aws_cloudwatch_event_target" "main" {
 
   input = <<EOF
 {
-  "task_arn": ${jsonencode(var.task_arn)},
+  "task_name": ${jsonencode(var.task_name)},
   "task_args": ${jsonencode(var.task_args)},
   "handler_arn": ${jsonencode(var.handler_arn)}
 }

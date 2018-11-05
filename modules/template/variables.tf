@@ -3,8 +3,8 @@ variable "schedule" {
   type        = "string"
 }
 
-variable "task_arn" {
-  description = "The arn of the ECS task to execute"
+variable "task_name" {
+  description = "The name of the ECS task to execute"
   type        = "string"
 }
 
