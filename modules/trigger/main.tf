@@ -10,4 +10,9 @@ module "lambda" {
 
   timeout               = 900
   log_retention_in_days = 90
+
+  environment {
+    CLUSTER = "${var.cluster_arn}"
+    SUBNET  = "${var.subnet_id}"
+  }
 }
