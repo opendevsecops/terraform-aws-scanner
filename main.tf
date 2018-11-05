@@ -28,24 +28,3 @@ module "task_cohesion" {
   name  = "opendevsecops_scanner_cohesion"
   image = "opendevsecops/cohesion:latest"
 }
-
-module "task_wpscan" {
-  source = "modules/task"
-
-  name  = "opendevsecops_scanner_wpscan"
-  image = "opendevsecops/wpscan:latest"
-}
-
-module "task_nmap" {
-  source = "modules/task"
-
-  name  = "opendevsecops_scanner_nmap"
-  image = "opendevsecops/nmap:latest"
-}
-
-module "task_masscan" {
-  source = "modules/task"
-
-  name  = "opendevsecops_scanner_masscan"
-  image = "opendevsecops/masscan:latest"
-}
