@@ -2,3 +2,35 @@
 [![Follow on Twitter](https://img.shields.io/twitter/follow/opendevsecops.svg?logo=twitter)](https://twitter.com/opendevsecops)
 
 # AWS Scanner Terraform Module
+
+Terraform module which provides easy to configure an environment for running automated security scanning solutions.
+
+## Introduction 
+
+This module provides an end-to-end solution for orchestrating automated vulnerability scanning tools. You can configure, designate, schedule regular scans and process the result with ease.
+
+## Getting Started
+
+Getting started is easy. All resources such as ECS cluster, VPCs, and task definitions are provisioned out of the box. Here is a complete example:
+
+```terraform
+module "scanner" {
+  source = "opendevsecops/scanner/aws"
+}
+
+module "scanner_cohesion" {
+  source = "opendevsecops/scanner/aws//modules/cohesion"
+
+  schedule = "rate(24 hours)"
+  target = "http://target"
+
+  trigger_arn = "${module.scanner.trigger_arn}"
+  handler_arn = "${module.scanner.handler_arn}"
+}
+```
+
+This module is automatically published to the Terraform Module Registry. More information about the available inputs, outputs, dependencies, and instructions on how to use the module can be found at the official page [here](https://registry.terraform.io/modules/opendevsecops/scanner).
+
+## Caveats
+
+At present only [SecApps Cohesion](https://secapps.com/cohesion) with more scanners coming soon.
