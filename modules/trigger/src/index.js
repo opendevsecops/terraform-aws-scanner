@@ -34,7 +34,8 @@ const launchTask = async (name, args, env) => {
                 }
             ],
 
-            taskRoleArn: process.env.TASK_ROLE_ARN
+            taskRoleArn: process.env.TASK_ROLE_ARN,
+            executionRoleArn: process.env.EXECUTION_ROLE_ARN
         }
     }).promise()
 }
