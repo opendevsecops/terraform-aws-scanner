@@ -30,6 +30,9 @@ module "scanner_cohesion" {
 
 This module is automatically published to the Terraform Module Registry. More information about the available inputs, outputs, dependencies, and instructions on how to use the module can be found at the official page [here](https://registry.terraform.io/modules/opendevsecops/scanner).
 
-## Caveats
+## Supported Scanner
 
-At present only [SecApps Cohesion](https://secapps.com/cohesion) with more scanners coming soon.
+The following scanners are currently supported:
+
+* [Cohesion](https://secapps.com/cohesion)
+* [Wpscan](https://wpscan.org/)
