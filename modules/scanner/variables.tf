@@ -17,8 +17,3 @@ variable "trigger_arn" {
   description = "The ARN of the trigger lambda function"
   type        = "string"
 }
-
-variable "handler_arn" {
-  description = "The ARN of the handler lambda function"
-  type        = "string"
-}

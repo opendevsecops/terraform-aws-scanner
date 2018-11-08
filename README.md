@@ -25,7 +25,6 @@ module "scanner_cohesion" {
   target = "http://target"
 
   trigger_arn = "${module.scanner.trigger_arn}"
-  handler_arn = "${module.scanner.handler_arn}"
 }
 ```
 

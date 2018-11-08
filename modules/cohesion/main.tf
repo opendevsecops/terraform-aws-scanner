@@ -7,5 +7,4 @@ module "main" {
   task_args = ["scanner", "${var.target}"]
 
   trigger_arn = "${var.trigger_arn}"
-  handler_arn = "${var.handler_arn}"
 }

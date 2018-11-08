@@ -1,9 +1,10 @@
 module "cluster" {
-  source = "modules/cluster"
-}
+  source = "opendevsecops/ecs-cluster/aws"
 
-module "handler" {
-  source = "modules/handler"
+  name = "opendevsecops_scanner"
+
+  vpc_cidr_block    = "10.52.52.0/24"
+  subnet_cidr_block = "10.52.52.0/24"
 }
 
 module "trigger" {
@@ -23,7 +24,7 @@ module "trigger" {
 # soon as support for count is introduced in later version of terraform. 
 
 module "task_cohesion" {
-  source = "modules/task"
+  source = "opendevsecops/ecs-task/aws"
 
   name  = "opendevsecops_scanner_cohesion"
   image = "opendevsecops/cohesion:latest"
