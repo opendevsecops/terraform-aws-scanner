@@ -29,3 +29,10 @@ module "task_cohesion" {
   name  = "opendevsecops_scanner_cohesion"
   image = "opendevsecops/cohesion:latest"
 }
+
+module "task_wpscan" {
+  source = "opendevsecops/ecs-task/aws"
+
+  name  = "opendevsecops_scanner_wpscan"
+  image = "opendevsecops/wpscan:latest"
+}
