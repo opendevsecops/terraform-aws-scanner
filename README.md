@@ -43,8 +43,8 @@ The following scanners are currently supported:
 
 ### Cohesion
 
-Image: https://github.com/opendevsecops/docker-cohesion
-URL: https://secapps.com/cohesion
+* Image: https://github.com/opendevsecops/docker-cohesion
+* URL: https://secapps.com/cohesion
 
 ```
 module "scanner_cohesion" {
@@ -60,8 +60,8 @@ module "scanner_cohesion" {
 
 ### WPScan
 
-Image: https://github.com/opendevsecops/docker-wpscan
-URL: https://wpscan.org
+* Image: https://github.com/opendevsecops/docker-wpscan
+* URL: https://wpscan.org
 
 ```
 module "scanner_wpscan" {
@@ -77,8 +77,8 @@ module "scanner_wpscan" {
 
 ### Nmap
 
-Image: https://github.com/opendevsecops/docker-nmap
-URL: https://nmap.org
+* Image: https://github.com/opendevsecops/docker-nmap
+* URL: https://nmap.org
 
 ```
 module "scanner_nmap" {
@@ -95,8 +95,8 @@ module "scanner_nmap" {
 
 ### GitLeaks
 
-Image: https://github.com/opendevsecops/docker-gitleaks
-URL: https://github.com/zricethezav/gitleaks
+* Image: https://github.com/opendevsecops/docker-gitleaks
+* URL: https://github.com/zricethezav/gitleaks
 
 ```
 module "scanner_gitleaks" {
@@ -112,8 +112,8 @@ module "scanner_gitleaks" {
 
 ### Amass
 
-Image: https://github.com/opendevsecops/docker-amass
-URL: https://github.com/caffix/amass
+* Image: https://github.com/opendevsecops/docker-amass
+* URL: https://github.com/caffix/amass
 
 ```
 module "scanner_amass" {
