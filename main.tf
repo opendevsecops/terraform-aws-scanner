@@ -36,3 +36,10 @@ module "task_wpscan" {
   name  = "opendevsecops_scanner_wpscan"
   image = "opendevsecops/wpscan:latest"
 }
+
+module "task_nmap" {
+  source = "opendevsecops/ecs-task/aws"
+
+  name  = "opendevsecops_scanner_nmap"
+  image = "opendevsecops/nmap:latest"
+}
