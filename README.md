@@ -39,6 +39,7 @@ The following scanners are currently supported:
 * WPScan
 * Nmap
 * GitLeaks
+* Amass
 
 ### Cohesion
 
@@ -104,6 +105,23 @@ module "scanner_gitleaks" {
   schedule = "rate(24 hours)"
 
   target = "https://github.com/target/target.git"
+
+  trigger_arn = "${module.scanner.trigger_arn}"
+}
+```
+
+### Amass
+
+Image: https://github.com/opendevsecops/docker-amass
+URL: https://github.com/caffix/amass
+
+```
+module "scanner_amass" {
+  source = "opendevsecops/scanner/aws//modules/amass"
+
+  schedule = "rate(24 hours)"
+
+  target = "target"
 
   trigger_arn = "${module.scanner.trigger_arn}"
 }

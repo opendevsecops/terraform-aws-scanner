@@ -50,3 +50,10 @@ module "task_gitleaks" {
   name  = "opendevsecops_scanner_gitleaks"
   image = "opendevsecops/gitleaks:latest"
 }
+
+module "task_amass" {
+  source = "opendevsecops/ecs-task/aws"
+
+  name  = "opendevsecops_scanner_amass"
+  image = "opendevsecops/amass:latest"
+}
