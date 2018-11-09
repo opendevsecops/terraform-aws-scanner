@@ -35,11 +35,11 @@ This module is automatically published to the Terraform Module Registry. More in
 
 The following scanners are currently supported:
 
-* Cohesion
-* WPScan
-* Nmap
-* GitLeaks
-* Amass
+* Cohesion - Dynamic Web Application Security Scanner
+* WPScan - Wordpress Security Scanner
+* Nmap - Network Security Scanner
+* GitLeaks - Git Security Scanner
+* Amass - Domain Enumeration
 
 ### Cohesion
 
