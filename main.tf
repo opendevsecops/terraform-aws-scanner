@@ -43,3 +43,10 @@ module "task_nmap" {
   name  = "opendevsecops_scanner_nmap"
   image = "opendevsecops/nmap:latest"
 }
+
+module "task_gitleaks" {
+  source = "opendevsecops/ecs-task/aws"
+
+  name  = "opendevsecops_scanner_gitleaks"
+  image = "opendevsecops/gitleaks:latest"
+}

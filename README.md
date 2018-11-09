@@ -22,6 +22,7 @@ module "scanner_cohesion" {
   source = "opendevsecops/scanner/aws//modules/cohesion"
 
   schedule = "rate(24 hours)"
+
   target = "http://target"
 
   trigger_arn = "${module.scanner.trigger_arn}"
@@ -37,6 +38,7 @@ The following scanners are currently supported:
 * Cohesion
 * WPScan
 * Nmap
+* GitLeaks
 
 ### Cohesion
 
@@ -48,6 +50,7 @@ module "scanner_cohesion" {
   source = "opendevsecops/scanner/aws//modules/cohesion"
 
   schedule = "rate(24 hours)"
+
   target = "http://target"
 
   trigger_arn = "${module.scanner.trigger_arn}"
@@ -64,6 +67,7 @@ module "scanner_wpscan" {
   source = "opendevsecops/scanner/aws//modules/wpscan"
 
   schedule = "rate(24 hours)"
+
   target = "http://target"
 
   trigger_arn = "${module.scanner.trigger_arn}"
@@ -80,8 +84,26 @@ module "scanner_nmap" {
   source = "opendevsecops/scanner/aws//modules/nmap"
 
   schedule = "rate(24 hours)"
+
   target = "10.10.10.0/24"
   flags = ["-sS"]
+
+  trigger_arn = "${module.scanner.trigger_arn}"
+}
+```
+
+### GitLeaks
+
+Image: https://github.com/opendevsecops/docker-gitleaks
+URL: https://github.com/zricethezav/gitleaks
+
+```
+module "scanner_gitleaks" {
+  source = "opendevsecops/scanner/aws//modules/gitleaks"
+
+  schedule = "rate(24 hours)"
+
+  target = "https://github.com/target/target.git"
 
   trigger_arn = "${module.scanner.trigger_arn}"
 }
