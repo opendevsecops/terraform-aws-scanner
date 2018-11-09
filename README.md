@@ -34,11 +34,14 @@ This module is automatically published to the Terraform Module Registry. More in
 
 The following scanners are currently supported:
 
-* [Cohesion](https://secapps.com/cohesion)
-* [WPScan](https://wpscan.org/)
-* [Nmap](https://nmap.org/)
+* Cohesion
+* WPScan
+* Nmap
 
 ### Cohesion
+
+Image: https://github.com/opendevsecops/docker-cohesion
+URL: https://secapps.com/cohesion
 
 ```
 module "scanner_cohesion" {
@@ -53,6 +56,9 @@ module "scanner_cohesion" {
 
 ### WPScan
 
+Image: https://github.com/opendevsecops/docker-wpscan
+URL: https://wpscan.org
+
 ```
 module "scanner_wpscan" {
   source = "opendevsecops/scanner/aws//modules/wpscan"
@@ -66,9 +72,12 @@ module "scanner_wpscan" {
 
 ### Nmap
 
+Image: https://github.com/opendevsecops/docker-nmap
+URL: https://nmap.org
+
 ```
-module "scanner_cohesion" {
-  source = "opendevsecops/scanner/aws//modules/cohesion"
+module "scanner_nmap" {
+  source = "opendevsecops/scanner/aws//modules/nmap"
 
   schedule = "rate(24 hours)"
   target = "10.10.10.0/24"
