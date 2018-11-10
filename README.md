@@ -5,10 +5,6 @@
 
 Terraform module which provides easy to configure AWS environment for running automated security scanning solutions at scheduled intervals. You configure it. AWS will run it at minimal cost.
 
-## Introduction 
-
-This module provides an end-to-end solution for orchestrating automated vulnerability scanning tools. You can configure, designate, schedule regular scans and process the result with ease.
-
 ## Getting Started
 
 Getting started is easy. All resources such as ECS cluster, VPCs, and task definitions are provisioned out of the box. Here is a complete example:
