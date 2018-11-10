@@ -3,7 +3,7 @@
 
 # AWS Scanner Terraform Module
 
-Terraform module which provides easy to configure an environment for running automated security scanning solutions.
+Terraform module which provides easy to configure AWS environment for running automated security scanning solutions at scheduled interval.
 
 ## Introduction 
 
