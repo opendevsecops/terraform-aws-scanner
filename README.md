@@ -25,6 +25,8 @@ module "scanner_cohesion" {
 }
 ```
 
+Scanners outputs are available in the designated CloudWatch groups.
+
 This module is automatically published to the Terraform Module Registry. More information about the available inputs, outputs, dependencies, and instructions on how to use the module can be found at the official page [here](https://registry.terraform.io/modules/opendevsecops/scanner).
 
 ## Supported Scanner
@@ -41,6 +43,7 @@ The following scanners are currently supported:
 
 * Image: https://github.com/opendevsecops/docker-cohesion
 * URL: https://secapps.com/cohesion
+* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_cohesion
 
 ```
 module "scanner_cohesion" {
@@ -58,6 +61,7 @@ module "scanner_cohesion" {
 
 * Image: https://github.com/opendevsecops/docker-wpscan
 * URL: https://wpscan.org
+* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_wpscan
 
 ```
 module "scanner_wpscan" {
@@ -75,6 +79,7 @@ module "scanner_wpscan" {
 
 * Image: https://github.com/opendevsecops/docker-nmap
 * URL: https://nmap.org
+* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_nmap
 
 ```
 module "scanner_nmap" {
@@ -93,6 +98,7 @@ module "scanner_nmap" {
 
 * Image: https://github.com/opendevsecops/docker-gitleaks
 * URL: https://github.com/zricethezav/gitleaks
+* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_gitleaks
 
 ```
 module "scanner_gitleaks" {
@@ -110,6 +116,7 @@ module "scanner_gitleaks" {
 
 * Image: https://github.com/opendevsecops/docker-amass
 * URL: https://github.com/caffix/amass
+* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_amass
 
 ```
 module "scanner_amass" {
