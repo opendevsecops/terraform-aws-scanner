@@ -38,6 +38,7 @@ The following scanners are currently supported:
 * Nmap - Network Security Scanner
 * GitLeaks - Git Security Scanner
 * Amass - Domain Enumeration
+* Nikto - Web Application Security Scanner
 
 ### Cohesion
 
@@ -121,6 +122,24 @@ module "scanner_gitleaks" {
 ```
 module "scanner_amass" {
   source = "opendevsecops/scanner/aws//modules/amass"
+
+  schedule = "rate(24 hours)"
+
+  target = "target"
+
+  trigger_arn = "${module.scanner.trigger_arn}"
+}
+```
+
+### Nikto
+
+* Image: https://github.com/opendevsecops/docker-nikto
+* URL: https://github.com/sullo/nikto
+* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_nikto
+
+```
+module "scanner_nikto" {
+  source = "opendevsecops/scanner/aws//modules/nikto"
 
   schedule = "rate(24 hours)"
 

@@ -57,3 +57,10 @@ module "task_amass" {
   name  = "opendevsecops_scanner_amass"
   image = "opendevsecops/amass:latest"
 }
+
+module "task_nikto" {
+  source = "opendevsecops/ecs-task/aws"
+
+  name  = "opendevsecops_scanner_nikto"
+  image = "opendevsecops/nikto:latest"
+}
