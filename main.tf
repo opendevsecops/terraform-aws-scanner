@@ -8,7 +8,7 @@ module "cluster" {
 }
 
 module "trigger" {
-  source = "modules/trigger"
+  source = "modules/_trigger"
 
   cluster_arn = "${module.cluster.arn}"
   subnet_id   = "${module.cluster.subnet_id}"

@@ -3,7 +3,7 @@ locals {
 }
 
 module "main" {
-  source = "../scanner"
+  source = "../_scanner"
 
   schedule = "${var.schedule}"
 
