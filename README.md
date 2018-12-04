@@ -29,7 +29,7 @@ Scanners outputs are available in the designated CloudWatch groups.
 
 This module is automatically published to the Terraform Module Registry. More information about the available inputs, outputs, dependencies, and instructions on how to use the module can be found at the official page [here](https://registry.terraform.io/modules/opendevsecops/scanner).
 
-## Supported Scanner
+## Supported Scanners
 
 The following scanners are currently supported:
 
