@@ -33,18 +33,18 @@ This module is automatically published to the Terraform Module Registry. More in
 
 The following scanners are currently supported:
 
-* Cohesion - Dynamic Web Application Security Scanner
-* WPScan - Wordpress Security Scanner
-* Nmap - Network Security Scanner
-* GitLeaks - Git Security Scanner
-* Amass - Domain Enumeration
-* Nikto - Web Application Security Scanner
+  * Cohesion - Dynamic Web Application Security Scanner
+  * WPScan - Wordpress Security Scanner
+  * Nmap - Network Security Scanner
+  * GitLeaks - Git Security Scanner
+  * Amass - Domain Enumeration
+  * Nikto - Web Application Security Scanner
 
 ### Cohesion
 
-* Image: https://github.com/opendevsecops/docker-cohesion
-* URL: https://secapps.com/cohesion
-* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_cohesion
+  * Image: https://github.com/opendevsecops/docker-cohesion
+  * URL: https://secapps.com/cohesion
+  * Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_cohesion
 
 ```
 module "scanner_cohesion" {
@@ -60,9 +60,9 @@ module "scanner_cohesion" {
 
 ### WPScan
 
-* Image: https://github.com/opendevsecops/docker-wpscan
-* URL: https://wpscan.org
-* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_wpscan
+  * Image: https://github.com/opendevsecops/docker-wpscan
+  * URL: https://wpscan.org
+  * Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_wpscan
 
 ```
 module "scanner_wpscan" {
@@ -78,9 +78,9 @@ module "scanner_wpscan" {
 
 ### Nmap
 
-* Image: https://github.com/opendevsecops/docker-nmap
-* URL: https://nmap.org
-* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_nmap
+  * Image: https://github.com/opendevsecops/docker-nmap
+  * URL: https://nmap.org
+  * Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_nmap
 
 ```
 module "scanner_nmap" {
@@ -97,9 +97,9 @@ module "scanner_nmap" {
 
 ### GitLeaks
 
-* Image: https://github.com/opendevsecops/docker-gitleaks
-* URL: https://github.com/zricethezav/gitleaks
-* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_gitleaks
+  * Image: https://github.com/opendevsecops/docker-gitleaks
+  * URL: https://github.com/zricethezav/gitleaks
+  * Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_gitleaks
 
 ```
 module "scanner_gitleaks" {
@@ -115,9 +115,9 @@ module "scanner_gitleaks" {
 
 ### Amass
 
-* Image: https://github.com/opendevsecops/docker-amass
-* URL: https://github.com/caffix/amass
-* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_amass
+  * Image: https://github.com/opendevsecops/docker-amass
+  * URL: https://github.com/caffix/amass
+  * Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_amass
 
 ```
 module "scanner_amass" {
@@ -133,9 +133,9 @@ module "scanner_amass" {
 
 ### Nikto
 
-* Image: https://github.com/opendevsecops/docker-nikto
-* URL: https://github.com/sullo/nikto
-* Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_nikto
+  * Image: https://github.com/opendevsecops/docker-nikto
+  * URL: https://github.com/sullo/nikto
+  * Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_nikto
 
 ```
 module "scanner_nikto" {
