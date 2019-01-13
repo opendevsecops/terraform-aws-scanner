@@ -7,7 +7,7 @@ Terraform module which provides easy to configure AWS environment for running au
 
 ## Getting Started
 
-Getting started is easy. All resources such as ECS cluster, VPCs, and task definitions are provisioned out of the box. Here is a complete example:
+Getting started is easy. All resources such as the designated ECS cluster, VPCs, and task definitions are provisioned out of the box. Here is a complete example how to setup the Cohesion web security scanner:
 
 ```terraform
 module "scanner" {
@@ -31,7 +31,7 @@ This module is automatically published to the Terraform Module Registry. More in
 
 ## Supported Scanners
 
-The following scanners are currently supported:
+The following scanners are currently supported. More scanners can be easily added as long as they are packaged as docker containers:
 
   * Cohesion - Dynamic Web Application Security Scanner
   * WPScan - Wordpress Security Scanner
@@ -148,3 +148,7 @@ module "scanner_nikto" {
   trigger_arn = "${module.scanner.trigger_arn}"
 }
 ```
+
+## Contribute
+
+Fork the project. Create a scanner definition in the modules subfolder. Use Cohesion, Nmap or any other scanner as an example. Once you are happy with your changes, create a pull request. We will review and if the submissison is good we will accept it as part of the official module distribution.
