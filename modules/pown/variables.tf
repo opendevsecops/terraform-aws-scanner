@@ -1,5 +1,5 @@
 variable "schedule" {}
 
-variable "target" {}
+variable "args" {}
 
 variable "trigger_arn" {}

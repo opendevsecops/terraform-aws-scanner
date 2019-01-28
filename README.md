@@ -71,8 +71,7 @@ module "scanner_pown" {
 
   schedule = "rate(24 hours)"
 
-  task_args = ["recon", "transform", "ghlm"]
-  target    = "target"
+  args = ["recon", "transform", "ghlm", "target"]
 
   trigger_arn = "${module.scanner.trigger_arn}"
 }
