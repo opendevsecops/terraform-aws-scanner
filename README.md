@@ -34,6 +34,7 @@ This module is automatically published to the Terraform Module Registry. More in
 The following scanners are currently supported. More scanners can be easily added as long as they are packaged as docker containers:
 
   * Cohesion - Dynamic Web Application Security Scanner
+  * Pown - Offensive security tooling
   * WPScan - Wordpress Security Scanner
   * Nmap - Network Security Scanner
   * GitLeaks - Git Security Scanner
@@ -53,6 +54,25 @@ module "scanner_cohesion" {
   schedule = "rate(24 hours)"
 
   target = "http://target"
+
+  trigger_arn = "${module.scanner.trigger_arn}"
+}
+```
+
+### Pown
+
+  * Image: https://github.com/opendevsecops/docker-pown
+  * URL: https://pownjs.com
+  * Default CloudWatch LogGroup: /ecs/opendevsecops_scanner_pown
+
+```
+module "scanner_pown" {
+  source = "opendevsecops/scanner/aws//modules/pown"
+
+  schedule = "rate(24 hours)"
+
+  task_args = ["recon", "transform", "ghlm"]
+  target    = "target"
 
   trigger_arn = "${module.scanner.trigger_arn}"
 }
