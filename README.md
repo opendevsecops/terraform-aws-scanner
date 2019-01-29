@@ -3,7 +3,9 @@
 
 # AWS Scanner Terraform Module
 
-Terraform module which provides easy to configure AWS environment for running automated security scanning solutions at scheduled intervals. You configure it. AWS will run it at minimal cost.
+This terraform module provides easy to configure AWS environment for running automated security scanning solutions at scheduled intervals. You configure it. AWS will run it at minimal cost.
+
+Running various types of scanners as part of your DevOps process is esential to keep on top of vulnerabilities. Ofthen this task is perfect by standalone tools such as Nessus, Nexpose, OpenVAS or even Qualys. However, all of these tools have their own blindspots and are not very DevOps-friendly. This module provides you a good starting point to improve your automated scanning infrastructure once and for all.
 
 ## Getting Started
 
